@@ -30,8 +30,7 @@ main {
 }
 
 .card {
-    padding: 20px;
-    /* height: 200px; */
+    padding: 30px;
     border-radius: 5px;
 }
 
@@ -101,7 +100,22 @@ main {
 
 .card-why {
     background-color: var(--card-why);
+    color: #ffffff;
     border-radius: 0px 0px 5px 5px;
+}
+
+.card-why .why-us{
+    font-size: .9rem;
+}
+
+.card-why ul {
+    margin-top: 15px;
+}
+
+.card-why li {
+    color: #a3f5f5;
+    font-size: .7rem;
+    margin: 5px 0;
 }
 
 footer {
