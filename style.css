@@ -25,7 +25,7 @@ body {
 
 main {
     width: min(80%, 500px);
-    margin: 0 auto;
+    margin: 0px auto;
     box-shadow: 0px 00px 5px -1px rgba(0,0,0,0.62);
 }
 
@@ -41,19 +41,23 @@ main {
 }
 
 .card-information .lead-text {
+    color: var(--cyan);
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .card-information .sub-text {
+    color: var(--yellow);
     font-size: .8rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .card-information .para-text {
-    font-size: .8rem;
+    font-size: .7rem;
+    line-height: 20px;
     font-weight: 400;
+    color: #929191;
 }
 
 .card-cta {
