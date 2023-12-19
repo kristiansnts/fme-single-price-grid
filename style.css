@@ -4,13 +4,131 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    list-style-type: none;
 
-    --cyan: hsl(179, 62%, 43%);
-    --yellow: hsl(71, 73%, 54%);
-    --body-background: hsl(204, 43%, 93%);
-    --card-background: hsl(218, 22%, 67%);
+    --cyan: #39b1b0;
+    --yellow: #bfdf32;
+    --card-cta: #2bb3b1;
+    --card-why: #4abebd;
+    --body-background: #e6eff6;
 }
 
 body {
     font-family: 'Karla', sans-serif;
+    background-color: var(--body-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: min(80%, 500px);
+    margin: 0 auto;
+    box-shadow: 0px 00px 5px -1px rgba(0,0,0,0.62);
+}
+
+.card {
+    padding: 20px;
+    /* height: 200px; */
+    border-radius: 5px;
+}
+
+.card-information {
+    background-color: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    font-size: .9rem;
+}
+
+.card-information .lead-text {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-information .sub-text {
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-information .para-text {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.card-cta {
+    background-color: var(--card-cta);
+    border-radius: 0px;
+    color: #ffffff;
+}
+
+.card-cta .lead-subcription {
+    font-size: .9rem;
+    margin-bottom: 15px;
+}
+
+.card-cta .pricing-tag .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.card-cta .pricing-tag .per-price {
+    font-size: .7rem;
+    font-weight: 400;
+    color: #a3f5f5;
+}
+
+.card-cta .benefit-text {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: .8rem;
+}
+
+.card-cta .button-cta {
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--yellow);
+    color: #ffffff;
+    box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.46);
+    font-size: .8rem;
+}
+
+.card-why {
+    background-color: var(--card-why);
+    border-radius: 0px 0px 5px 5px;
+}
+
+footer {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "action info"
+        ;
+    }
+
+    .card-information {
+        grid-area: header;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .card-cta {
+        grid-area: action;
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    .card-why {
+        grid-area: info;
+        border-radius: 0px 0px 5px 0px;
+    }
 }
